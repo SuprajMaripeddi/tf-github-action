@@ -1,8 +1,10 @@
 name: Terraform AWS Deployment
 on:
-  push:
-    branches:
-      - main 
+  workflow_dispatch:
+    inputs:
+      sample:
+        type: string
+        required: true
 
 jobs:
   deploy:
